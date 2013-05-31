@@ -1,0 +1,8 @@
+(function($){
+
+    $.cs = $.cs || {}
+
+    
+
+
+})(jQuery);

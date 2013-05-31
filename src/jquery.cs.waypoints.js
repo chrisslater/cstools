@@ -1,0 +1,3 @@
+jQuery.fn.csWaypoints = function(){
+    
+}
