@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scrollto example.</title>
+        <style>
+            .viewport div {
+                top: 100px;
+                width: 400px;
+                height: 400px;
+                background: blue;
+            }
+            .viewport div:nth-child(odd) {
+                background: red;
+            }
+            img {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <nav>
+                <a href="#/test">test</a>
+                <a href="#/test1">test1</a>
+            </nav>
+            <div class="viewport">
+                <div id="test">
+                    test
+                </div>
+                <div id="test">
+                    test1
+                </div>
+            </div>
+        </div>
+        <!-- Javascript files -->
+        <script src="../lib/jquery-2.0.2.min.js"></script>
+        <script src="../src/jquery.cs.scrollto.js"></script>
+        <script>
+            jQuery(document).ready(function($){
+                $('body').csScrollTo();
+            });
+        </script>
+    </body>
+</html>

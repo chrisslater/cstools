@@ -2,7 +2,6 @@
 <html>
     <head>
         <title>Serving images at double pixel size.</title>
-        <link rel="stylesheet" href="css/style.css">
         <style>
             .wrapper {
                 width: 350px;
@@ -15,9 +14,16 @@
     </head>
     <body>
         <div class="wrapper">
-            <noscript class="image-loader">
-                <img src="http://placehold.it/350x150" data-src-big="http://placehold.it/700x300" data-src-small="http://placehold.it/350x150" />
-            </noscript>
+            <div class="test-one">
+                <noscript class="image-loader">
+                    <img src="http://placehold.it/350x150" data-src-big="http://placehold.it/700x300" data-src-small="http://placehold.it/350x150" />
+                </noscript>
+            </div>
+            <!-- <div class="test-two">
+                <noscript class="image-loader">
+                    <img src="http://placehold.it/350x150" data-src-big="http://placehold.it/700x300" data-src-small="http://placehold.it/350x150" />
+                </noscript>
+            </div> -->
         </div>
         <!-- Javascript files -->
         <script src="../lib/jquery-2.0.2.min.js"></script>

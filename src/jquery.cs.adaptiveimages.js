@@ -36,7 +36,6 @@ $.fn.csAdaptiveImages = function(conf) {
         // Run init on each image
         images.each(function(k,v){
 
-
             // image as a jquery object.
             var img = processImageTagFromRaw(v);
             var value = dprValue();
@@ -45,14 +44,10 @@ $.fn.csAdaptiveImages = function(conf) {
                 img.attr('src', img.data('src-' + value));
             } 
 
-
-
             img.addClass('js-ai-processed');
 
             // Apply image tag before the no script
             img.insertBefore($(v));
-
-            //$(v).before(img);
         });
     }
 
@@ -65,23 +60,6 @@ $.fn.csAdaptiveImages = function(conf) {
         return conf.isMobileAt;
     }
 
-    // Setters
-
-    // Functions
-
-    // function connection() {
-    //     var connection = false;
-    //     console.log(navigator.connection);
-    //     if (navigator.connection) {
-    //         console.log('android');
-    //     }
-    //     if (navigator.mozConnection) {
-    //         console.log('moz', navigator.mozConnection);
-
-    //     }
-
-    // }
-
     function processImageTagFromRaw(v) {
         return getImageTag(parseRawHTML(v));
     }
@@ -93,9 +71,6 @@ $.fn.csAdaptiveImages = function(conf) {
 
     // the parsed object will contain empty text nodes either side of the image tag. Returning the 1st index only returns just the image
     function getImageTag(parsedObject) {
-
-        alert(parsedObject.eq(1).prop('nodeType'));
-
         return parsedObject.eq(1);
     }
 
