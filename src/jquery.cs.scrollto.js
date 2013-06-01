@@ -9,7 +9,7 @@
 
     $.cs.scrollTo = {
         conf: {
-            selector: 'a[href^="#/"]',
+            selector: 'a[href^="#"]',
             before: function(){},
             after: function(){}
         }
@@ -41,5 +41,7 @@
         conf = $.extend({}, $.cs.scrollTo.conf, conf);
 
         var instance = new ScrollTo(this, conf);
+
+        return this;
     }
 })(jQuery);
