@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Scrollto example.</title>
+        <style>
+            .wrapper {
+                max-width: 960px;
+                margin: 0 auto;
+            }
+            img {
+                width: 100%;
+                display:block;
+                position:relative;
+            }
+            .container {
+                position:relative;
+            }
+
+            .viewport {
+                overflow:auto;
+                overflow:hidden;
+            }
+
+            .items {
+                position:relative;
+                margin-left: 0; /* for test - going to be calculated */
+                width: 500%; /* for test - going to be calculated */
+                width: 166%;
+            }
+            .items div  {
+                width: 20%; /* for test - going to be calculated */
+                float:left;
+            }
+            .pager {
+                
+            }
+            .prev,.next {
+                position: absolute;
+                top: 50%;
+                margin-top: -18px;
+            }
+            .prev {
+                left:0;
+            }
+            .next {
+                right:0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="container">
+                <div class="viewport js-cs-rotator">
+                    <div class="items">
+                        <div>
+                            <img src="http://placehold.it/960x500&text=image 1" alt="image1">
+                        </div>
+                        <div>
+                            <img src="http://placehold.it/960x500&text=image 2" alt="image2">
+                        </div>
+                        <div>
+                            <img src="http://placehold.it/960x500&text=image 3" alt="image3">
+                        </div>
+                        <div>
+                            <img src="http://placehold.it/960x500&text=image 4" alt="image4">
+                        </div>
+                        <div>
+                            <img src="http://placehold.it/960x500&text=image 5" alt="image5">
+                        </div>
+                    </div>               
+                </div>
+                <div class="prev">prev</div>
+                <div class="next">next</div>  
+            </div>
+            <div class="container">
+                <div class="viewport js-cs-rotator">
+                    <div class="items">
+                        <div>
+                            <img src="http://placehold.it/960x500&text=image 1" alt="image1">
+                        </div>
+                        <div>
+                            <img src="http://placehold.it/960x500&text=image 2" alt="image2">
+                        </div>
+                        <div>
+                            <img src="http://placehold.it/960x500&text=image 3" alt="image3">
+                        </div>
+                        <div>
+                            <img src="http://placehold.it/960x500&text=image 4" alt="image4">
+                        </div>
+                        <div>
+                            <img src="http://placehold.it/960x500&text=image 5" alt="image5">
+                        </div>
+                    </div>         
+                </div>
+                <div class="pager"></div>
+                <div class="prev">prev</div>
+                <div class="next">next</div>
+            </div>
+        </div>
+        <!-- Javascript files -->
+        <script src="../lib/jquery-2.0.2.min.js"></script>
+        <script src="../src/jquery.cs.rotator.js"></script>
+        <script>
+            jQuery(document).ready(function($){
+                $('.container').csRotator();
+            });
+        </script>
+    </body>
+</html>
