@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>You Tube Images replacement example.</title>
+        <style>
+            .wrapper {
+                max-width: 720px;
+                margin: 0 auto;
+            }
+            img {
+                width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrapper">
+            <div class="example-one">
+                <img src="http://placehold.it/720x350&text=YouTube+Video+Image" alt="" data-cs-youtube-id="nlYlNF30bVg" class="cs-youtube">
+            </div>
+            <div class="example-two">
+                <img src="http://placehold.it/720x350&text=YouTube+Video+Image" alt="" data-cs-youtube-id="nlYlNF30bVg" class="cs-youtube">
+            </div>
+        </div>
+        <!-- Javascript files -->
+        <script src="../lib/jquery-2.0.2.min.js"></script>
+        <script src="../src/jquery.cs.youtubeimages.js"></script>
+        <script>
+            jQuery(document).ready(function($){
+                $('body').csYoutubeImages();
+            });
+        </script>
+    </body>
+</html>
